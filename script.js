@@ -55,7 +55,6 @@ function renderCV(data) {
   document.getElementById('profile-name').textContent = personal.name;
   document.getElementById('profile-title').textContent = personal.role;
   document.getElementById('summary').textContent = data.statement;
-  document.getElementById('about-text').textContent = data.statement;
 
   const summaryContainer = document.getElementById('cv-summary');
   summaryContainer.innerHTML = `

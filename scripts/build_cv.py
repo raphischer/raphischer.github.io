@@ -22,14 +22,14 @@ def escape_latex(value):
         return str(value)
     return (
         value
-        .replace('\\', r'\\textbackslash{}')
-        .replace('&', r'\\&')
-        .replace('%', r'\\%')
-        .replace('$', r'\\$')
-        .replace('#', r'\\#')
-        .replace('_', r'\\_')
-        .replace('{', r'\\{')
-        .replace('}', r'\\}')
+        .replace('\\', r'\textbackslash{}')
+        .replace('&', r'\&')
+        .replace('%', r'\%')
+        .replace('$', r'\$')
+        .replace('#', r'\#')
+        .replace('_', r'\_')
+        .replace('{', r'\{')
+        .replace('}', r'\}')
     )
 
 
@@ -308,40 +308,13 @@ def generate_style_file(data, style_path, highlight_rgb):
 def render_personal_header(personal):
     lines = [r'\begin{minipage}[c]{0.7\textwidth}']
     lines.append(
-        r'    \textbf{\LARGE ' + escape_latex(personal.get('name', '')) +
-        r'~{\color{highlight}|} Curriculum Vitae}\vspace{0.5em}\\'
+        r'    \textbf{\LARGE \name~{\color{highlight}|} Curriculum Vitae}\vspace{0.5em}\\'
     )
-    role = escape_latex(personal.get('role', ''))
-    affiliation = escape_latex(personal.get('affiliation', ''))
-    if role and affiliation:
-        lines.append(f'    {role} at {affiliation}\\\\')
-    elif role:
-        lines.append(f'    {role}\\\\')
-    birthinfo = escape_latex(personal.get('birthinfo', ''))
-    nationality = escape_latex(personal.get('nationality', ''))
-    if birthinfo or nationality:
-        lines.append(f'    Born {birthinfo}. Nationality: {nationality}\\\\')
-    email = personal.get('email', '')
-    if email:
-        lines.append(f'    Email: \\href{{mailto:{escape_latex(email)}}}{{{escape_latex(email)}}}\\\\')
-    website = personal.get('webpage', '')
-    linkedin = personal.get('linkedin', '')
-    if website and linkedin:
-        lines.append(
-            f'    To learn about my ongoing activities, visit my \\href{{{escape_latex(website)}}}{{webpage}} and \\href{{{escape_latex(linkedin)}}}{{LinkedIn}}\\\\'
-        )
-    elif website:
-        lines.append(f'    Website: \\href{{{escape_latex(website)}}}{{webpage}}\\\\')
-    scholar = personal.get('scholar', '')
-    github = personal.get('github', '')
-    if scholar and github:
-        lines.append(
-            f'    My publications and software are listed on \\href{{{escape_latex(scholar)}}}{{Google Scholar}} and \\href{{{escape_latex(github)}}}{{GitHub}}\\\\'
-        )
-    elif scholar:
-        lines.append(f'    Google Scholar: \\href{{{escape_latex(scholar)}}}{{link}}\\\\')
-    elif github:
-        lines.append(f'    GitHub: \\href{{{escape_latex(github)}}}{{link}}\\\\')
+    lines.append(r'    \role~at Lamarr-Institute | TU Dortmund University\\')
+    lines.append(r'    Born \birthinfo. Nationality: \nationality\\')
+    lines.append(r'    Email: \href{mailto:\mail}{\mail}\\')
+    lines.append(r'    To learn about my ongoing activities, visit my \href{\website}{webpage} and \href{\linkedin}{LinkedIn}\\')
+    lines.append(r'    My publications and software are listed on \href{\scholar}{Google Scholar} and \href{\github}{GitHub}\\')
     lines.append(r'\end{minipage}\hfill%')
     picture = personal.get('picture', '')
     if picture:
@@ -349,7 +322,6 @@ def render_personal_header(personal):
         lines.append(r'    \includegraphics[width=.7\linewidth]{' + escape_latex(picture) + r'}')
         lines.append(r'\end{minipage}')
     return '\n'.join(lines)
-
 
 def render_section(section):
     lines = [f'\\section{{{escape_latex(section.get("heading", ""))}}}']
@@ -359,14 +331,15 @@ def render_section(section):
         organization = escape_latex(item.get('organization', ''))
         lines.append(r'\begin{tabularx}{\textwidth}{p{0.14\textwidth}@{\hspace{1em}}X@{}}')
         if organization:
-            lines.append(f'  \\textbf{{{period}}} & \\textbf{{{title}}} @ {organization}\\[-0.9em]')
+            lines.append(f'  \\textbf{{{period}}} & \\textbf{{{title}}} @ {organization}\\\\[-0.9em]')
         else:
-            lines.append(f'  \\textbf{{{period}}} & \\textbf{{{title}}}\\[-0.9em]')
+            lines.append(f'  \\textbf{{{period}}} & \\textbf{{{title}}}\\\\[-0.9em]')
         highlights = item.get('highlights', []) or item.get('details', [])
         if highlights:
             lines.append(r'    & \footnotesize \begin{itemize}[leftmargin=1.2em,noitemsep,topsep=0pt]')
             for bullet in highlights:
-                lines.append(f'        \\item {escape_latex(bullet)}')
+                bullet = bullet.replace('&', r'\&')
+                lines.append(f'        \\item {bullet}')
             lines.append(r'      \end{itemize}')
         lines.append(r'\end{tabularx}')
     return '\n'.join(lines)
@@ -379,7 +352,7 @@ def build_tex(data):
     lines.append('')
     statement = data.get('statement', '')
     if statement:
-        lines.append(escape_latex(statement))
+        lines.append(statement)
         lines.append('')
     for section in data.get('sections', []):
         lines.append(render_section(section))
