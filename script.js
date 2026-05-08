@@ -25,26 +25,49 @@ function parseBibTeX(content) {
   return entries;
 }
 
+function parseAuthors(authorStr) {
+  if (!authorStr) return 'Unknown author';
+  const authors = authorStr.split(' and ').map(a => {
+    const parts = a.trim().split(', ');
+    if (parts.length === 2) {
+      return parts[1] + ' ' + parts[0];
+    } else {
+      return a.trim();
+    }
+  });
+  return authors.join(', ');
+}
+
+function getSortDate(pub) {
+  const dateStr = pub.fields.date || pub.fields.year || '0';
+  if (dateStr.includes('-')) {
+    return new Date(dateStr);
+  } else {
+    return new Date(dateStr + '-01-01');
+  }
+}
+
 function renderPublications(entries) {
   const container = document.getElementById('publication-list');
   container.innerHTML = '';
-  const sorted = entries.sort((a, b) => {
-    const yearA = parseInt(a.fields.year || '0', 10);
-    const yearB = parseInt(b.fields.year || '0', 10);
-    return yearB - yearA;
-  });
+  const sorted = entries.sort((a, b) => getSortDate(b) - getSortDate(a));
 
   sorted.forEach(pub => {
     const card = document.createElement('article');
     card.className = 'publication-card';
-    const title = pub.fields.title || pub.key;
-    const authors = pub.fields.author || 'Unknown author';
-    const journal = pub.fields.journal || pub.fields.booktitle || '';
-    const year = pub.fields.year || '';
+    let title = pub.fields.title || pub.key;
+    title = title.replace(/\{/g, '').replace(/\}/g, '');
+    const authors = parseAuthors(pub.fields.author);
+    let journal = pub.fields.journal || pub.fields.journaltitle || pub.fields.booktitle || '';
+    journal = journal.replace(/\{/g, '').replace(/\}/g, '');
+    let year = pub.fields.year || pub.fields.date || '';
+    let doi = (pub.fields.doi || '').replace(/\{/g, '').replace(/\}/g, '');
+    let url = (pub.fields.url || '').replace(/\{/g, '').replace(/\}/g, '');
 
     card.innerHTML = `
       <h3>${title}</h3>
       <p class="publication-meta">${authors}${journal ? ' · ' + journal : ''}${year ? ' · ' + year : ''}</p>
+      ${doi ? `<p><a href="https://doi.org/${doi}" target="_blank">DOI: ${doi}</a></p>` : url ? `<p><a href="${url}" target="_blank">Link</a></p>` : ''}
     `;
     container.appendChild(card);
   });
@@ -53,37 +76,39 @@ function renderPublications(entries) {
 function renderCV(data) {
   const personal = data.personal || {};
   document.getElementById('profile-name').textContent = personal.name;
-  document.getElementById('profile-title').textContent = personal.role;
+  document.getElementById('profile-title').textContent = personal.description;
   document.getElementById('summary').textContent = data.statement;
 
-  const summaryContainer = document.getElementById('cv-summary');
-  summaryContainer.innerHTML = `
-    <div class="cv-card">
-      <h3>Contact</h3>
-      <p class="cv-meta">${personal.email || 'email@example.com'}</p>
-      <p class="cv-meta">${personal.affiliation || 'Affiliation'}</p>
-    </div>
-    <div class="cv-card">
-      <h3>Links</h3>
-      <p><a href="${personal.webpage || '#'}" target="_blank">Webpage</a> · 
-         <a href="${personal.linkedin || '#'}" target="_blank">LinkedIn</a></p>
-      <p><a href="${personal.scholar || '#'}" target="_blank">Google Scholar</a> · 
-         <a href="${personal.github || '#'}" target="_blank">GitHub</a></p>
-    </div>
-  `;
+  // Set links in hero
+  document.getElementById('webpage-link').href = personal.webpage || '#';
+  document.getElementById('linkedin-link').href = personal.linkedin || '#';
+  document.getElementById('scholar-link').href = personal.scholar || '#';
+  document.getElementById('github-link').href = personal.github || '#';
+  document.getElementById('contact-link').href = 'mailto:' + (personal.email || '');
 
   const sections = document.getElementById('cv-sections');
   sections.innerHTML = '';
   (data.sections || []).forEach(section => {
     const card = document.createElement('div');
     card.className = 'cv-section';
-    card.innerHTML = `<h3>${section.heading}</h3>${(section.items || []).map(item => `
-      <div class="cv-item">
-        <strong>${item.title}</strong>
-        <p class="cv-meta">${item.period || ''} · ${item.organization || ''}</p>
-        ${(item.highlights || []).map(h => `<p>${h}</p>`).join('')}
-      </div>
-    `).join('')}`;
+    card.innerHTML = `<h3>${section.heading}</h3>${(section.items || []).map(item => {
+      if (section.heading === 'Awards & Scholarships' || section.heading === 'Volunteering & Activities') {
+        return `
+          <div class="cv-item">
+            <strong>${item.title} (${item.organization || ''})</strong>
+            <p class="cv-meta">${(item.highlights || []).map(h => '' + h + '').join('')} ${item.period ? '(' + item.period + ')' : ''}</p>
+          </div>
+        `;
+      } else {
+        return `
+          <div class="cv-item">
+            <strong>${item.title}</strong>
+            <p class="cv-meta">${item.period || ''} · ${item.organization || ''}</p>
+            ${(item.highlights || []).map(h => `<p>${h}</p>`).join('')}
+          </div>
+        `;
+      }
+    }).join('')}`;
     sections.appendChild(card);
   });
 }

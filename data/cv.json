@@ -1,7 +1,8 @@
 {
   "personal": {
-    "name": "Raphael Fischer",
+    "name": "Dr. Raphael Fischer",
     "role": "AI Scientist",
+    "description": "Interdisciplinary AI Scientist With A Focus on Real-World Impact",
     "affiliation": "Lamarr Institute for ML and AI | TU Dortmund University",
     "birthinfo": "10.10.1994",
     "nationality": "German",
@@ -94,6 +95,13 @@
       "heading": "Awards & Scholarships",
       "items": [
         {
+          "title": "Doctoral Thesis Award from the German Informatics Society (nominated)",
+          "organization": "2026",
+          "highlights": [
+            "Nominated by TU Dortmund University, selection colloquium and final decision pending."
+          ]
+        },
+        {
           "title": "Sustainability Award of the Computer Science Faculty @ TU Dortmund University",
           "organization": "2024",
           "highlights": [
@@ -151,7 +159,7 @@
       "items": [
         {
           "title": "Young AI Leaders",
-          "organization": "Since 2025",
+          "organization": "since 2025",
           "highlights": [
             "Global network that empowers young enthusiasts to drive positive change with AI",
             "Founded and actively leading the Dortmund Hub, growing to 15 members",
@@ -160,7 +168,7 @@
         },
         {
           "title": "Scientific Community Services",
-          "organization": "Since 2022",
+          "organization": "since 2022",
           "highlights": [
             "ACM Conference on Fairness, Accountability, and Transparency (FAccT) 2026",
             "Explainable AI for Time Series and Data Streams Workshop (TempXAI @ ECML-PKDD) 2025 & 2024",
@@ -171,7 +179,7 @@
         },
         {
           "title": "Lamarr Institute",
-          "organization": "Since 2019",
+          "organization": "since 2019",
           "highlights": [
             "Invited talks at ENFIELD Energy & Green AI Workshop (11/25), Sustainable AI Conference (09/25), Greentech.Ruhr meeting (05/25), DOPPLERS (03/25), BAuA KI-Werkstatt (11/24), AISoLA Conference (10/23), and BIFOLD All Hands Meeting (10/23)",
             "Posters & demos at the Trustworthy AI Summit (09/25), political visits (06/24, 09/23, 08/19), and various strategic events",
@@ -182,7 +190,7 @@
         },
         {
           "title": "CS Faculty @ TU Dortmund University",
-          "organization": "Administrative activities",
+          "organization": "administrative activities",
           "highlights": [
             "Sustainability Commission: Conducting and promoting sustainable efforts (06/2025 -- Today)",
             "International Coordination: Assisting students and employees with stays abroad (12/2020 -- 12/2025)",

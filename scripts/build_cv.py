@@ -324,24 +324,47 @@ def render_personal_header(personal):
     return '\n'.join(lines)
 
 def render_section(section):
-    lines = [f'\\section{{{escape_latex(section.get("heading", ""))}}}']
-    for item in section.get('items', []):
-        period = escape_latex(item.get('period', ''))
-        title = escape_latex(item.get('title', ''))
-        organization = escape_latex(item.get('organization', ''))
-        lines.append(r'\begin{tabularx}{\textwidth}{p{0.14\textwidth}@{\hspace{1em}}X@{}}')
-        if organization:
-            lines.append(f'  \\textbf{{{period}}} & \\textbf{{{title}}} @ {organization}\\\\[-0.9em]')
-        else:
-            lines.append(f'  \\textbf{{{period}}} & \\textbf{{{title}}}\\\\[-0.9em]')
-        highlights = item.get('highlights', []) or item.get('details', [])
-        if highlights:
-            lines.append(r'    & \footnotesize \begin{itemize}[leftmargin=1.2em,noitemsep,topsep=0pt]')
+    heading = section.get('heading', '')
+    lines = [f'\\section{{{escape_latex(heading)}}}']
+    
+    if heading in ['Teaching Experience', 'Volunteering & Activities']:
+        for item in section.get('items', []):
+            title = escape_latex(item.get('title', ''))
+            lines.append(f'\\textbf{{{title}}}\\\\[-1.5em]')
+            lines.append(r'{\footnotesize \begin{itemize}[leftmargin=1.2em,noitemsep,topsep=0pt]')
+            highlights = item.get('highlights', []) or item.get('details', [])
+            item_prefix = '[]' if heading == 'Teaching Experience' else ''
             for bullet in highlights:
                 bullet = bullet.replace('&', r'\&')
-                lines.append(f'        \\item {bullet}')
-            lines.append(r'      \end{itemize}')
-        lines.append(r'\end{tabularx}')
+                lines.append(f'    \\item{item_prefix} {bullet}')
+            lines.append(r'  \end{itemize}}')
+    else:
+        if heading == 'Awards & Scholarships':
+            column_width = '0.07'
+        else:
+            column_width = '0.14'
+        
+        for item in section.get('items', []):
+            if heading == 'Awards & Scholarships':
+                period = escape_latex(item.get('organization', ''))
+                organization = ''
+            else:
+                period = escape_latex(item.get('period', ''))
+                organization = escape_latex(item.get('organization', ''))
+            title = escape_latex(item.get('title', ''))
+            lines.append(r'\begin{tabularx}{\textwidth}{p{' + column_width + r'\textwidth}@{\hspace{1em}}X@}')
+            if organization:
+                lines.append(f'  \\textbf{{{period}}} & \\textbf{{{title}}} @ {organization}\\\\[-0.9em]')
+            else:
+                lines.append(f'  \\textbf{{{period}}} & \\textbf{{{title}}}\\\\[-0.9em]')
+            highlights = item.get('highlights', []) or item.get('details', [])
+            if highlights:
+                lines.append(r'    & \footnotesize \begin{itemize}[leftmargin=1.2em,noitemsep,topsep=0pt]')
+                for bullet in highlights:
+                    bullet = bullet.replace('&', r'\&')
+                    lines.append(f'        \\item {bullet}')
+                lines.append(r'      \end{itemize}')
+            lines.append(r'\end{tabularx}')
     return '\n'.join(lines)
 
 

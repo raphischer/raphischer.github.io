@@ -229,17 +229,6 @@
 	keywords = {preprint},
 }
 
-@misc{kobschall_lift_2025,
-	title = {Lift {What} {You} {Can}: {Green} {Online} {Learning} with {Heterogeneous} {Ensembles}},
-	copyright = {All rights reserved},
-	url = {https://arxiv.org/abs/2509.18962},
-	doi = {10.48550/arXiv.2509.18962},
-	author = {Köbschall, Kirsten and Buschjäger, Sebastian and Fischer, Raphael and Hartung, Lisa and Kramer, Stefan},
-	year = {2025},
-	note = {\_eprint: 2509.18962},
-	keywords = {preprint},
-}
-
 @misc{fischer_benefits_2025,
 	title = {Benefits and {Limitations} of {Using} {GenAI} for {Political} {Education} and {Municipal} {Elections}},
 	url = {https://arxiv.org/abs/2510.11749},
@@ -365,4 +354,50 @@
 	month = jul,
 	year = {2024},
 	keywords = {videotalk},
+}
+
+@Article{Koebschall.etal.2026a,
+  author             = {Köbschall, Kirsten and Buschjäger, Sebastian and Fischer, Raphael and Hartung, Lisa and Kramer, Stefan},
+  abstract           = {Ensemble methods for stream mining necessitate managing multiple models and updating them as data distributions evolve. Considering the calls for more sustainability, established methods are however not sufficiently considerate of ensemble members’ computational expenses and instead overly focus on predictive capabilities. To address these challenges and enable green online learning, we propose heterogeneous online ensembles (HEROS). For every training step, HEROS chooses a subset of models from a pool of models initialized with diverse hyperparameter choices under resource constraints to train. We introduce a Markov decision process to theoretically capture the trade-offs between predictive performance and sustainability constraints. Based on this framework, we present different policies for choosing which models to train on incoming data. Most notably, we propose the novel Zeta-policy, which focuses on training near-optimal models at reduced costs. Using a stochastic model, we theoretically prove that our Zeta-policy achieves near optimal performance while using fewer resources compared to the best performing policy. In our experiments across 11 benchmark datasets, we find empiric evidence that our Zeta-policy is a strong contribution to the state-of-the-art, demonstrating highly accurate performance, in some cases even outperforming competitors, and simultaneously being much more resource-friendly.},
+  title              = {Lift What You Can: Green Online Learning with Heterogeneous Ensembles},
+  journaltitle       = {Data Mining and Knowledge Discovery},
+  year               = {2026},
+  volume             = {40},
+  number             = {3},
+  eid                = {32},
+  doi                = {10.1007/s10618-026-01200-3},
+  issn               = {1573-756X},
+  eprint             = {2509.18962},
+  eprintclass        = {cs.LG},
+  eprinttype         = {arxiv},
+  lamarr-area        = {reaml},
+  lamarr-institution = {tudo},
+  pubstate           = {inpress},
+}
+
+@Article{Pauly.etal.2026a,
+  abstract           = {Water pumps are critical components of modern infrastructure whose maintenance poses significant logistical and financial challenges. Addressing this issue, we propose a solution by retrofitting running pumps with health monitoring, deploying state-of-the-art machine learning (ML) techniques on edge sensors. Our work explores how basic power usage sensors can assess informative features about pump operation cycles. A combination of ML approaches, which can either be run at the edge or as a remote cloud-based analysis service, allows us to then assess the health status of the water pump over time. Our conceptual approach was practically evaluated in a real-world field test on different pump installations, from which we derive \texttt{SYPHM}, a synthetic data generator for pump health monitoring. Tested across various experiments, our approach demonstrated high accuracy in detecting anomalous patterns while balancing privacy, scalability, and cost-efficiency. As such, our research presents novel insights for deploying ML for critical infrastructure, enabling affordable predictive maintenance for sustainable water technology.},
+  author             = {Pauly, Andreas and Fischer, Raphael and Jamialahmadi, Nastaran and Graurock, David and Oettmeier, Martin and Rehof, Jakob},
+  date               = {2026},
+  journaltitle       = {Procedia CIRP},
+  title              = {Retrofitting Water Pumps with Health Monitoring and Machine Learning at the Edge},
+  lamarr-area        = {production,reaml}, 
+  lamarr-institution = {tudo},
+  pubstate           = {forthcoming}
+}
+
+@Article{Fischer.etal.2026a,
+  abstract           = {Time series classification (TSC) enables important use cases, however lacks a unified understanding of performance trade-offs across models, datasets, and hardware. While resource awareness has grown in the field, TSC methods have not yet been rigorously evaluated for energy efficiency. This paper introduces a holistic evaluation framework that explicitly explores the balance of predictive performance and resource consumption in TSC. To boost efficiency, we apply a theoretically bounded pruning strategy to leading hybrid classifiers - Hydra and Quant - and present Hydrant, a novel, prunable combination of both. With over 4000 experimental configurations across 20 MONSTER datasets, 13 methods, and three compute setups, we systematically analyze how model design, hyperparameters, and hardware choices affect practical TSC performance. Our results showcase that pruning can significantly reduce energy consumption by up to 80\% while maintaining competitive predictive quality, usually costing the model less than 5\% of accuracy. The proposed methodology, experimental results, and accompanying software advance TSC toward sustainable and reproducible practice.},
+  author             = {Fischer, Raphael and Dempster, Angus and Buschjäger, Sebastian and Jakobs, Matthias and Maniar, Urav and Webb, Geoffrey I.},
+  date               = {2026-04-09},
+  journaltitle       = {arXiv},
+  lamarr-area        = {reaml},
+  lamarr-institution = {tudo},
+  pubstate           = {prepublished},
+  title              = {Pruning {Extensions} and {Efficiency} {Trade}-{Offs} for {Sustainable} {Time} {Series} {Classification}},
+  doi                = {10.48550/arXiv.2604.07953},
+  note               = {arXiv:2604.07953 [cs]},
+  url                = {http://arxiv.org/abs/2604.07953},
+  keywords           = {Computer Science - Machine Learning, Computer Science - Artificial Intelligence},
+  publisher          = {arXiv},
 }
