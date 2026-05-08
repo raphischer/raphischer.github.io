@@ -1,0 +1,128 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{CustomCoverletter}[Generated cover letter package]
+
+\RequirePackage[T1]{fontenc}
+\RequirePackage[default,semibold]{sourcesanspro}
+\RequirePackage[12pt]{moresize}
+\usepackage{anyfontsize}
+\RequirePackage{csquotes}
+
+% MARGINS AND SPACING
+\newcommand*\TLC@bottommargin{2in} % default value
+\DeclareOptionX{bottommargin}{%
+  \renewcommand*\TLC@bottommargin{#1}%
+}
+
+% Process options
+\ProcessOptionsX
+
+% --- Geometry setup ---
+\RequirePackage[
+  margin=.5in,
+  bottom=\TLC@bottommargin
+]{geometry}
+
+\setlength{\parskip}{1em}
+%\setlength{\parindent}{1in}
+
+% COLOR
+\RequirePackage{xcolor}
+\definecolor{highlight}{RGB}{202,215,104}
+
+% TABLES
+\RequirePackage{tabularx}
+\RequirePackage{array}
+\RequirePackage{enumitem}
+\renewcommand{\arraystretch}{1.05}
+
+% BOLD COMMAND
+\newcommand{\bold}[1]{ {\bfseries #1}}
+
+% NO PAGE NUMBER
+\pagenumbering{gobble}
+
+% SUBFILES IMPORTING
+\RequirePackage{standalone}
+\RequirePackage{import}
+
+% FOR TEMPLATE FILLER
+\RequirePackage[english]{babel}
+\RequirePackage{blindtext}
+
+% ----------------------------------------------------------------------
+% Section heading redefinitions (supporting \section and \section*)
+% ----------------------------------------------------------------------
+\makeatletter
+
+\providecommand{\section}{%
+  \@ifstar{\TLC@sectionStar}{\TLC@section}}
+
+\newcommand{\TLC@section}[1]{%
+  \par\vspace{0.1em}%
+  {\Large\textbf{#1}}\par%
+}
+
+\newcommand{\TLC@sectionStar}[1]{%
+  \par\vspace{0.1em}%
+  {\Large\textbf{#1}}\par%
+}
+
+\providecommand{\subsection}{%
+  \@ifstar{\TLC@subsectionStar}{\TLC@subsection}}
+
+\newcommand{\TLC@subsection}[1]{%
+  \par\vspace{0.1em}%
+  {\large\textbf{#1}}\par%
+}
+
+\newcommand{\TLC@subsectionStar}[1]{%
+  \par\vspace{0.1em}%
+  {\large\textbf{#1}}\par%
+}
+
+\makeatother
+
+% publications
+\RequirePackage[backend=biber,style=alphabetic,sorting=ydnt]{biblatex}
+\addbibresource{publications.bib}
+\DeclareBibliographyCategory{peerreviewed}
+\DeclareBibliographyCategory{preprint}
+\DeclareBibliographyCategory{videotalks}
+
+% categories
+\AtDataInput{%
+  \ifkeyword{peerreviewed}{%
+    \addtocategory{peerreviewed}{\thefield{entrykey}}%
+  }{}
+  \ifkeyword{videotalk}{%
+    \addtocategory{videotalks}{\thefield{entrykey}}%
+  }{}
+  \ifkeyword{preprint}{%
+    \addtocategory{preprint}{\thefield{entrykey}}%
+  }{}
+}
+
+% Hide some fields
+\AtEveryBibitem{%
+  \clearfield{month}
+  \clearfield{note}
+  \clearlist{publisher}
+  \clearlist{language}
+  \clearlist{location}
+  \clearname{editor}%
+  \ifboolexpr{not test {\iffieldundef{doi}}}{%
+    \clearfield{url}
+  }{}
+}
+
+\def\name{Raphael Fischer}
+\signature{\name}
+\address{}
+\def\birthinfo{10.10.1994}
+\def\linkedin{https://www.linkedin.com/in/dr-raphael-fischer-3b1046208/}
+\def\mail{raphael.fischer@cs.tu-dortmund.de}
+\def\website{https://raphischer.de}
+\def\role{AI Scientist}
+\def\github{https://github.com/raphischer/}
+\def\scholar{https://scholar.google.de/citations?user=zxTGb7AAAAAJ}
+\def\nationality{German}
