@@ -8,14 +8,7 @@ from pathlib import Path
 TEX_HEADER = r"""\documentclass[12pt]{letter}
 \usepackage[utf8]{inputenc}
 \usepackage[bottommargin=1in]{CustomCoverletter}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\usepackage{xcolor}
-\usepackage[hidelinks]{hyperref}
-\usepackage{enumitem}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\setlist[itemize]{leftmargin=1.2em,noitemsep,topsep=0pt}
+
 \begin{document}
 """
 

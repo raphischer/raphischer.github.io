@@ -5,6 +5,7 @@
 *.fls
 *.fdb_latexmk
 cv.tex
+CustomCoverletter.sty
 
 # Node / editor
 .DS_Store
