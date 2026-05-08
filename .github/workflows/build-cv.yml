@@ -1,0 +1,47 @@
+name: Build CV PDF
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'data/cv.json'
+      - 'scripts/**'
+      - '.github/workflows/build-cv.yml'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install TeX Live dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra texlive-xetex latexmk
+
+      - name: Generate CV LaTeX
+        run: python scripts/build_cv.py --input data/cv.json --output cv.tex
+
+      - name: Compile CV PDF
+        run: latexmk -pdf -interaction=nonstopmode -halt-on-error cv.tex
+
+      - name: Commit generated PDF
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: "github-actions[bot]"
+          author_email: "github-actions[bot]@users.noreply.github.com"
+          message: "Auto-build CV PDF"
+          add: cv.pdf
+          sign: false
+          skip_empty_commit: true

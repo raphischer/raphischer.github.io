@@ -1,0 +1,11 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+cv.tex
+
+# Node / editor
+.DS_Store
+Thumbs.db

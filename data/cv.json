@@ -1,0 +1,195 @@
+{
+  "personal": {
+    "name": "Raphael Fischer",
+    "role": "AI Scientist",
+    "affiliation": "Lamarr Institute for ML and AI | TU Dortmund University",
+    "birthinfo": "10.10.1994",
+    "nationality": "German",
+    "email": "raphael.fischer@cs.tu-dortmund.de",
+    "webpage": "https://raphischer.de",
+    "linkedin": "https://www.linkedin.com/in/dr-raphael-fischer-3b1046208/",
+    "scholar": "https://scholar.google.de/citations?user=zxTGb7AAAAAJ",
+    "github": "https://github.com/raphischer/",
+    "picture": "picture.jpg"
+  },
+  "statement": "My research focuses on the sustainability and trustworthiness of AI, exploring implications for our society, economy, and environment. Guided by interdisciplinarity and real-world applications, my PhD contributed new methods for benchmarking, reporting, labeling, and meta-learning, accompanied by practical solutions from the transfer project with Wilo. I also lead the Young AI Leaders Dortmund, under the UN AI for Good mission.",
+  "sections": [
+    {
+      "heading": "Professional Experience",
+      "items": [
+        {
+          "period": "06/19 -- Today",
+          "title": "AI Scientist",
+          "organization": "Lamarr Institute for ML and AI (Dortmund)",
+          "highlights": [
+            "Researching sustainability, resource-awareness and trustworthiness of AI",
+            "14 peer-reviewed publications, conference and delegation visits, transfer and network activities"
+          ]
+        },
+        {
+          "period": "02/22 -- 03/25",
+          "title": "Data Scientist (part time)",
+          "organization": "Wilo SE (Dortmund)",
+          "highlights": [
+            "Working in the strategic partnership with Lamarr Institute (research transfer project)",
+            "Exploring AI use cases and prototyping ML solutions for industrial manufacturing"
+          ]
+        },
+        {
+          "period": "07/16 -- 08/18",
+          "title": "Working Student",
+          "organization": "Capgemini (Düsseldorf) & Qiagen (Hilden)",
+          "highlights": [
+            "Software development for DNA sequencing, logging and testing with Qiagen as a client"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Education",
+      "items": [
+        {
+          "period": "06/19 -- 07/25",
+          "title": "PhD in Computer Science",
+          "organization": "TU Dortmund University -- Summa cum laude | 1.0 | ECTS A",
+          "highlights": [
+            "Topic: Advancing the Sustainability of ML and AI via Labeling and Meta-Learning",
+            "Committee: JProf. Thomas Liebig, Prof. Geoff Webb, Prof. Christian Janiesch, Prof. Jakob Rehof"
+          ]
+        },
+        {
+          "period": "01/25 -- 03/25",
+          "title": "Research Visit",
+          "organization": "Monash University, Melbourne",
+          "highlights": [
+            "Exploring resource efficiency in time series classification"
+          ]
+        },
+        {
+          "period": "10/16 -- 03/19",
+          "title": "Master's in Computer Science",
+          "organization": "TU Dortmund University -- Magna cum laude | 1.2 | ECTS B",
+          "highlights": [
+            "Topic: Filling Gaps in Incomplete Satellite Images with Compressable STRFs",
+            "Supervisors: Prof. Katharina Morik, Dr. Nico Piatkowski"
+          ]
+        },
+        {
+          "period": "09/18 -- 03/19",
+          "title": "Research Visit",
+          "organization": "Monash University, Melbourne",
+          "highlights": [
+            "Exploring probabilistic gap filling and cloud removal for satellite image series"
+          ]
+        },
+        {
+          "period": "10/13 -- 09/16",
+          "title": "Bachelor's in Computer Science",
+          "organization": "TU Dortmund University -- Cum laude | 2.4 | ECTS C",
+          "highlights": []
+        }
+      ]
+    },
+    {
+      "heading": "Awards & Scholarships",
+      "items": [
+        {
+          "title": "Sustainability Award of the Computer Science Faculty @ TU Dortmund University",
+          "organization": "2024",
+          "highlights": [
+            "Awarded for our work on Sustainable LLMs: Energy Efficiency and Transparent Labeling"
+          ]
+        },
+        {
+          "title": "Scholarship from the German Academic Scholarship Foundation (Studienstiftung)",
+          "organization": "2014",
+          "highlights": [
+            "For my Bachelor's and Master's studies, also volunteering as Regional Representative (06/15 -- 06/17)"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Teaching Experience",
+      "items": [
+        {
+          "title": "Supervision",
+          "organization": "Bachelor's & Master's theses as well as student assistants",
+          "highlights": [
+            "01/26 -- Master's student assistant Y. Abdelrahim, working on efficiency benchmarking of AI (ongoing)",
+            "10/25 -- BA of F. Meree on Interactive AI Labels for Trust: A User-Centric Reporting Framework",
+            "06/24 -- Bachelor's student assistant K. Poitz, working on interdisciplinary evaluations of AI labels (ongoing)",
+            "10/24 -- BA of F. Theiner on Resource Efficiency of Adversarial Training and Inference of RobustBench Models",
+            "02/24 -- BA of A. Borowski on Energy Efficiency Analysis of Knowledge Graph Embedding Models",
+            "12/22 -- Master's student assistant A. van der Staay, working on benchmarking AI edge devices (until 12/23)",
+            "11/23 -- BA of T. Kubiak on A Comparative Analysis of Parameter-Efficient-Fine-Tuning Methods in LLMs",
+            "09/22 -- MA of F. Dillkötter on Automated Generation of Evaluation Tasks for ML Models"
+          ]
+        },
+        {
+          "title": "Individual Lectures",
+          "organization": "For Bachelor's, Master's & PhD students",
+          "highlights": [
+            "10/25 -- Sustainable Development in the Age of AI as part of the Computer Science and Sustainability lecture series",
+            "10/25 -- Fundamentals of Trustworthy AI as part of the Data, Knowledge, and Context in ML and AI lecture series",
+            "05/25 -- Sustainability and AI as part of the Introduction to Data Science II lecture series"
+          ]
+        },
+        {
+          "title": "Other Activities",
+          "organization": "Educating school students & general public",
+          "highlights": [
+            "2025 -- Teaching GISSV students (remote) and organizing workshops for Digital Week Dortmund and Girls' Day @ Lamarr",
+            "2024 -- Training course for teachers on AI, Environment and Sustainability (fobizz / remote)",
+            "2023 -- Organizing workshops for AI4Schools and Digital Week Dortmund @ Lamarr"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Volunteering & Activities",
+      "items": [
+        {
+          "title": "Young AI Leaders",
+          "organization": "Since 2025",
+          "highlights": [
+            "Global network that empowers young enthusiasts to drive positive change with AI",
+            "Founded and actively leading the Dortmund Hub, growing to 15 members",
+            "Investigating the use of generative AI for political education in context of the Dortmund municipal elections"
+          ]
+        },
+        {
+          "title": "Scientific Community Services",
+          "organization": "Since 2022",
+          "highlights": [
+            "ACM Conference on Fairness, Accountability, and Transparency (FAccT) 2026",
+            "Explainable AI for Time Series and Data Streams Workshop (TempXAI @ ECML-PKDD) 2025 & 2024",
+            "AAAI/ACM Conference on AI, Ethics, and Society (AIES) 2025",
+            "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD) 2024",
+            "European Conference on ML and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD) 2022"
+          ]
+        },
+        {
+          "title": "Lamarr Institute",
+          "organization": "Since 2019",
+          "highlights": [
+            "Invited talks at ENFIELD Energy & Green AI Workshop (11/25), Sustainable AI Conference (09/25), Greentech.Ruhr meeting (05/25), DOPPLERS (03/25), BAuA KI-Werkstatt (11/24), AISoLA Conference (10/23), and BIFOLD All Hands Meeting (10/23)",
+            "Posters & demos at the Trustworthy AI Summit (09/25), political visits (06/24, 09/23, 08/19), and various strategic events",
+            "Selected delegation member for visits in Canada (10/25), USA (04/24), and France (07/22)",
+            "Research visit & talk at Emma Strubell's Lab @ Carnegie Mellon University, Pittsburgh, USA (02/22)",
+            "Contributed posts to the ML Blog and actively participated in lab visits, scientific forums, pitch talks, and education activities"
+          ]
+        },
+        {
+          "title": "CS Faculty @ TU Dortmund University",
+          "organization": "Administrative activities",
+          "highlights": [
+            "Sustainability Commission: Conducting and promoting sustainable efforts (06/2025 -- Today)",
+            "International Coordination: Assisting students and employees with stays abroad (12/2020 -- 12/2025)",
+            "Faculty Council: Representative of the research associates (2022 -- 2024)"
+          ]
+        }
+      ]
+    }
+  ]
+}

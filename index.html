@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raphael Fischer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-branding">
+      <p class="eyebrow">Researcher Portfolio</p>
+      <h1 id="profile-name">Raphael Fischer</h1>
+      <p id="profile-title">Interdisciplinary AI Researcher With A Focus on Real-World Impact</p>
+    </div>
+    <nav class="page-nav">
+      <a href="#about">About</a>
+      <a href="#publications">Publications</a>
+      <a href="#cv">CV</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero-panel">
+      <div>
+        <h2>Exploring research, open data, and scholarly communication.</h2>
+        <p id="summary">A concise description of research interests, methodology, and engagement.</p>
+        <div class="buttons">
+          <a id="download-cv" class="button" href="cv.pdf" target="_blank">Download CV</a>
+          <a class="button button-secondary" href="#publications">Read publications</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="content-panel">
+      <h2>About</h2>
+      <p id="about-text">This is a simple academic homepage built for research activities and outreach. It uses JSON for CV data, BibTeX for publications, and a lightweight responsive frontend.</p>
+    </section>
+
+    <section id="publications" class="content-panel">
+      <h2>Publications</h2>
+      <div id="publication-list" class="list-grid"></div>
+      <p class="status-note">Publications are loaded from <code>publications/references.bib</code>.</p>
+    </section>
+
+    <section id="cv" class="content-panel">
+      <h2>Curriculum Vitae</h2>
+      <div id="cv-summary" class="grid-two"></div>
+      <div id="cv-sections"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© Copyright 2026 Raphael Fischer. Custom HTML and CSS. Hosted by GitHub Pages.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

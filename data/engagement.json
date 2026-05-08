@@ -1,0 +1,28 @@
+{
+  "Service": [
+    {
+      "title": "Peer Reviewer",
+      "subtitle": "Journal and conference reviews",
+      "description": "Contributing reviews for journals in computational methods and open science."
+    },
+    {
+      "title": "Program Committee",
+      "subtitle": "International conference",
+      "description": "Supporting conference track selection and workshop organization."
+    }
+  ],
+  "Teaching": [
+    {
+      "title": "Guest Lecturer",
+      "subtitle": "Graduate courses",
+      "description": "Lectured on reproducible research, data management, and scientific software development."
+    }
+  ],
+  "Outreach": [
+    {
+      "title": "Community Workshops",
+      "subtitle": "Open science training",
+      "description": "Organized workshops on open data, collaborative publishing, and research software."
+    }
+  ]
+}
