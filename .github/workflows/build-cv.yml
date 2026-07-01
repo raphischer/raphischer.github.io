@@ -28,7 +28,7 @@ jobs:
       - name: Install TeX Live dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-xetex latexmk
+          sudo apt-get install -y texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-xetex texlive-bibtex-extra latexmk
 
       - name: Generate CV LaTeX
         run: python scripts/build_cv.py --input data/cv.json --output cv.tex --no-compile
