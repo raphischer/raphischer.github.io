@@ -123,7 +123,7 @@ async function init() {
   }
 
   try {
-    const bibText = await fetch('publications/references.bib').then(resp => resp.text());
+    const bibText = await fetch('data/references.bib').then(resp => resp.text());
     const publications = parseBibTeX(bibText);
     renderPublications(publications);
   } catch (error) {

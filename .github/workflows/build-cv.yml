@@ -30,6 +30,9 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-xetex texlive-bibtex-extra latexmk
 
+      - name: Copy bibliography file to root
+        run: cp data/references.bib references.bib
+
       - name: Generate CV LaTeX
         run: python scripts/build_cv.py --input data/cv.json --output cv.tex --no-compile
 

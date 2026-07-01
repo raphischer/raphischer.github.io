@@ -6,7 +6,7 @@ A lightweight GitHub Pages website for a researcher portfolio with automatic CV 
 
 - `index.html` + `styles.css` + `script.js` for a responsive static site
 - `data/cv.json` for CV content (personal, statement, experience, education, etc.)
-- `publications/references.bib` for publication metadata
+- `data/references.bib` for publication metadata
 - `scripts/build_cv.py` to generate `CustomCoverletter.sty`, `cv.tex`, and `cv.pdf` from JSON and the website CSS palette
 - GitHub Actions workflow to compile `cv.pdf` from `cv.tex`
 
@@ -49,7 +49,7 @@ The `data/cv.json` follows this schema:
 ## How to use
 
 1. Update `data/cv.json` with your personal information, experience, education, and other sections.
-2. Add publications to `publications/references.bib`.
+2. Add publications to `data/references.bib`.
 3. Push to `main`; the workflow automatically generates `cv.pdf` and `cv.tex`.
 4. GitHub Pages serves the site from the repository root.
 

@@ -239,7 +239,7 @@ def generate_style_file(data, style_path, highlight_rgb):
 
 % publications
 \RequirePackage[backend=biber,style=alphabetic,sorting=ydnt]{{biblatex}}
-\addbibresource{{publications.bib}}
+\addbibresource{{references.bib}}
 \DeclareBibliographyCategory{{peerreviewed}}
 \DeclareBibliographyCategory{{preprint}}
 \DeclareBibliographyCategory{{videotalks}}
