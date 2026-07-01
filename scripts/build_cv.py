@@ -115,15 +115,11 @@ def parse_color_value(value, variables):
     raise ValueError(f'Unsupported color format: {value}')
 
 
-def pick_highlight_color(variables):
-    candidates = ['--accent', '--highlight', '--pale-amber', '--olive-leaf', '--powder-blue']
-    for key in candidates:
-        if key in variables:
-            try:
-                return parse_color_value(variables[key], variables)
-            except ValueError:
-                continue
-    return (88, 166, 255)
+def pick_highlight_color(variables, preference='olive-leaf'):
+    try:
+        return parse_color_value(variables[f'--{preference}'], variables)
+    except ValueError:
+        return (88, 166, 255)
 
 
 def format_address(personal):
@@ -352,7 +348,7 @@ def render_section(section):
                 period = escape_latex(item.get('period', ''))
                 organization = escape_latex(item.get('organization', ''))
             title = escape_latex(item.get('title', ''))
-            lines.append(r'\begin{tabularx}{\textwidth}{p{' + column_width + r'\textwidth}@{\hspace{1em}}X@}')
+            lines.append(r'\begin{tabularx}{\textwidth}{p{' + column_width + r'\textwidth}@{\hspace{1em}}X@{}}')
             if organization:
                 lines.append(f'  \\textbf{{{period}}} & \\textbf{{{title}}} @ {organization}\\\\[-0.9em]')
             else:
