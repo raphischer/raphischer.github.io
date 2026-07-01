@@ -11,6 +11,7 @@
     "linkedin": "https://www.linkedin.com/in/dr-raphael-fischer-3b1046208/",
     "scholar": "https://scholar.google.de/citations?user=zxTGb7AAAAAJ",
     "github": "https://github.com/raphischer/",
+    "orcid": "https://orcid.org/0000-0002-1808-5773",
     "picture": "picture.jpg"
   },
   "statement": "My research focuses on the sustainability and trustworthiness of AI, exploring implications for our society, economy, and environment. Guided by interdisciplinarity and real-world applications, my PhD contributed new methods for benchmarking, reporting, labeling, and meta-learning, accompanied by practical solutions from the transfer project with Wilo. I also lead the Young AI Leaders Dortmund, under the UN AI for Good mission.",
@@ -19,16 +20,25 @@
       "heading": "Professional Experience",
       "items": [
         {
-          "period": "06/19 -- Today",
+          "period": "07/26 -- today",
+          "title": "Postdoctoral Researcher",
+          "organization": "XplaiNLP Group @ Johannes Gutenberg University Mainz",
+          "highlights": [
+            "Verifying and extracting disinformation narratives with individualized explanations",
+            "Coordinating the VeraXtract project and connecting it to my sustainability background"
+          ]
+        },
+        {
+          "period": "06/19 -- 06/26",
           "title": "AI Scientist",
-          "organization": "Lamarr Institute for ML and AI (Dortmund)",
+          "organization": "Lamarr Institute for ML and AI @ TU Dortmund University",
           "highlights": [
             "Researching sustainability, resource-awareness and trustworthiness of AI",
             "14 peer-reviewed publications, conference and delegation visits, transfer and network activities"
           ]
         },
         {
-          "period": "02/22 -- 03/25",
+          "period": "02/22 -- 01/25",
           "title": "Data Scientist (part time)",
           "organization": "Wilo SE (Dortmund)",
           "highlights": [
@@ -69,7 +79,7 @@
         {
           "period": "10/16 -- 03/19",
           "title": "Master's in Computer Science",
-          "organization": "TU Dortmund University -- Magna cum laude | 1.2 | ECTS B",
+          "organization": "TU Dortmund University -- 1.2 | ECTS B",
           "highlights": [
             "Topic: Filling Gaps in Incomplete Satellite Images with Compressable STRFs",
             "Supervisors: Prof. Katharina Morik, Dr. Nico Piatkowski"
@@ -86,7 +96,7 @@
         {
           "period": "10/13 -- 09/16",
           "title": "Bachelor's in Computer Science",
-          "organization": "TU Dortmund University -- Cum laude | 2.4 | ECTS C",
+          "organization": "TU Dortmund University -- 2.4 | ECTS C",
           "highlights": []
         }
       ]
@@ -95,10 +105,17 @@
       "heading": "Awards & Scholarships",
       "items": [
         {
-          "title": "Doctoral Thesis Award from the German Informatics Society (nominated)",
+          "title": "YIG Prep Pro Remote Fellow at Karlsruhe Institute of Technology (KIT)",
           "organization": "2026",
           "highlights": [
-            "Nominated by TU Dortmund University, selection colloquium and final decision pending."
+            "Receiving tailored mentorship, proposal strategy guidance, and training to prepare a junior research group proposal"
+          ]
+        },
+        {
+          "title": "Nominated for the Doctoral Thesis Award from the Gesellschaft für Informatik e.V.",
+          "organization": "2026",
+          "highlights": [
+            "Nominated by the Computer Science Faculty at TU Dortmund University, due to an outstanding PhD"
           ]
         },
         {
@@ -125,8 +142,10 @@
           "organization": "Bachelor's & Master's theses as well as student assistants",
           "highlights": [
             "01/26 -- Master's student assistant Y. Abdelrahim, working on efficiency benchmarking of AI (ongoing)",
+            "03/26 -- MA of T. Horny on Investigating Energy Efficiency Dimensions for Local Deployment in Large Language Models",
+            "12/25 -- BA of B. Demirici on Benchmarking Large Language Models for Sustainable Evaluation",
             "10/25 -- BA of F. Meree on Interactive AI Labels for Trust: A User-Centric Reporting Framework",
-            "06/24 -- Bachelor's student assistant K. Poitz, working on interdisciplinary evaluations of AI labels (ongoing)",
+            "06/24 -- Bachelor's student assistant K. Poitz, working on interdisciplinary evaluations of AI labels (until 05/26)",
             "10/24 -- BA of F. Theiner on Resource Efficiency of Adversarial Training and Inference of RobustBench Models",
             "02/24 -- BA of A. Borowski on Energy Efficiency Analysis of Knowledge Graph Embedding Models",
             "12/22 -- Master's student assistant A. van der Staay, working on benchmarking AI edge devices (until 12/23)",
@@ -135,12 +154,15 @@
           ]
         },
         {
-          "title": "Individual Lectures",
+          "title": "Lectures and Talks",
           "organization": "For Bachelor's, Master's & PhD students",
           "highlights": [
-            "10/25 -- Sustainable Development in the Age of AI as part of the Computer Science and Sustainability lecture series",
-            "10/25 -- Fundamentals of Trustworthy AI as part of the Data, Knowledge, and Context in ML and AI lecture series",
-            "05/25 -- Sustainability and AI as part of the Introduction to Data Science II lecture series"
+            "05/26 -- Sustainable AI Development (RC-Trust Graduate School)",
+            "04/26 -- Bridging the Communication Gap: Labels for Sustainable AI Development (CEIPI AI Digital Technologies and IP Master)",
+            "04/26 -- Sustainable Development and Energy Efficiency in Deep Learning (ELLIS Mathematics & Efficiency of Deep Learning reading group)",
+            "10/25 -- Sustainable Development in the Age of AI (Computer Science and Sustainability lecture series)",
+            "10/25 -- Fundamentals of Trustworthy AI (Data, Knowledge, and Context in ML and AI lecture series)",
+            "05/25 -- Sustainability and AI (Introduction to Data Science II lecture series)"
           ]
         },
         {
@@ -170,11 +192,13 @@
           "title": "Scientific Community Services",
           "organization": "since 2022",
           "highlights": [
-            "ACM Conference on Fairness, Accountability, and Transparency (FAccT) 2026",
-            "Explainable AI for Time Series and Data Streams Workshop (TempXAI @ ECML-PKDD) 2025 & 2024",
-            "AAAI/ACM Conference on AI, Ethics, and Society (AIES) 2025",
-            "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD) 2024",
-            "European Conference on ML and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD) 2022"
+            "Editor for Journal of Artificial Intelligence Research (JAIR) Special Track on Challenges in Pretraining 2026",
+            "Reviewing for International Conference on Data Mining (ICDM) 2026",
+            "Reviewing for Conference on Fairness, Accountability, and Transparency (FAccT) 2026",
+            "Reviewing for Explainable AI for Time Series and Data Streams Workshop (TempXAI @ ECML-PKDD) 2025 & 2024",
+            "Reviewing for Conference on AI, Ethics, and Society (AIES) 2025",
+            "Reviewing for Conference on Knowledge Discovery and Data Mining (KDD) 2024",
+            "Reviewing for European Conference on ML and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD) 2022, 2024 & 2026"
           ]
         },
         {

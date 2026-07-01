@@ -84,6 +84,7 @@ function renderCV(data) {
   document.getElementById('linkedin-link').href = personal.linkedin || '#';
   document.getElementById('scholar-link').href = personal.scholar || '#';
   document.getElementById('github-link').href = personal.github || '#';
+  document.getElementById('orcid-link').href = personal.orcid || '#';
   document.getElementById('contact-link').href = 'mailto:' + (personal.email || '');
 
   const sections = document.getElementById('cv-sections');
@@ -92,7 +93,7 @@ function renderCV(data) {
     const card = document.createElement('div');
     card.className = 'cv-section';
     card.innerHTML = `<h3>${section.heading}</h3>${(section.items || []).map(item => {
-      if (section.heading === 'Awards & Scholarships' || section.heading === 'Volunteering & Activities') {
+      if (section.heading === 'Awards & Scholarships') {
         return `
           <div class="cv-item">
             <strong>${item.title} (${item.organization || ''})</strong>
