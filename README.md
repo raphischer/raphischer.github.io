@@ -55,7 +55,7 @@ The `data/cv.json` follows this schema:
 1. Update `data/cv.json` with your personal information, experience, education, and other sections.
 2. For statement links that should appear on both the public website and in exported LaTeX/PDF, use the structured `statement` array with `{ "text": ..., "href": ... }` segments.
 3. Add publications to `data/references.bib`.
-4. Push to `main`; the workflow automatically generates `cv.pdf`, `cv.tex`, and `CustomCoverletter.sty`.
+4. Push to `main`; the workflow automatically generates `cv.tex` and `CustomCoverletter.sty`, compiles `cv.pdf`, and commits only `cv.pdf`.
 5. GitHub Pages serves the site from the repository root.
 
 ## Custom domain

@@ -46,6 +46,4 @@ jobs:
           author_name: "github-actions[bot]"
           author_email: "github-actions[bot]@users.noreply.github.com"
           message: "Auto-build CV PDF"
-          add: cv.pdf cv.tex CustomCoverletter.sty
-          sign: false
-          skip_empty_commit: true
+          add: cv.pdf
