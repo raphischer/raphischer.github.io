@@ -5,7 +5,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-TEX_HEADER = r"""\documentclass[12pt]{letter}
+TEX_HEADER = r"""\documentclass[11pt]{letter}
 \usepackage[utf8]{inputenc}
 \usepackage[bottommargin=1in]{CustomCoverletter}
 
@@ -31,6 +31,30 @@ def escape_latex(value):
         .replace('{', r'\{')
         .replace('}', r'\}')
     )
+
+
+def render_rich_text_latex(value):
+    if isinstance(value, str):
+        return escape_latex(value)
+    if not isinstance(value, list):
+        return ''
+
+    rendered = []
+    for segment in value:
+        if isinstance(segment, str):
+            rendered.append(escape_latex(segment))
+            continue
+
+        if not isinstance(segment, dict):
+            continue
+
+        text = escape_latex(segment.get('text', ''))
+        href = segment.get('href')
+        if href:
+            rendered.append(f'\\href{{{escape_latex(href)}}}{{{text}}}')
+        else:
+            rendered.append(text)
+    return ''.join(rendered)
 
 
 def parse_css_variables(paths):
@@ -302,11 +326,15 @@ def generate_style_file(data, style_path, highlight_rgb):
 
 
 def render_personal_header(personal):
+    affiliation = escape_latex(personal.get('affiliation', ''))
     lines = [r'\begin{minipage}[c]{0.7\textwidth}']
     lines.append(
         r'    \textbf{\LARGE \name~{\color{highlight}|} Curriculum Vitae}\vspace{0.5em}\\'
     )
-    lines.append(r'    \role~at Lamarr-Institute | TU Dortmund University\\')
+    if affiliation:
+        lines.append(f'    \\role~at {affiliation}\\\\')
+    else:
+        lines.append(r'    \role\\')
     lines.append(r'    Born \birthinfo. Nationality: \nationality\\')
     lines.append(r'    Email: \href{mailto:\mail}{\mail}\\')
     lines.append(r'    To learn about my ongoing activities, visit my \href{\website}{webpage} and \href{\linkedin}{LinkedIn}\\')
@@ -371,7 +399,7 @@ def build_tex(data):
     lines.append('')
     statement = data.get('statement', '')
     if statement:
-        lines.append(statement)
+        lines.append(render_rich_text_latex(statement))
         lines.append('')
     for section in data.get('sections', []):
         lines.append(render_section(section))

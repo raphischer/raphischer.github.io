@@ -4,6 +4,39 @@ async function fetchJson(path) {
   return await response.json();
 }
 
+function renderRichText(container, value) {
+  container.textContent = '';
+
+  if (typeof value === 'string') {
+    container.textContent = value;
+    return;
+  }
+
+  if (!Array.isArray(value)) {
+    return;
+  }
+
+  value.forEach(segment => {
+    if (typeof segment === 'string') {
+      container.appendChild(document.createTextNode(segment));
+      return;
+    }
+
+    const text = segment?.text || '';
+    if (!segment?.href) {
+      container.appendChild(document.createTextNode(text));
+      return;
+    }
+
+    const link = document.createElement('a');
+    link.href = segment.href;
+    link.target = '_blank';
+    link.rel = 'noreferrer noopener';
+    link.textContent = text;
+    container.appendChild(link);
+  });
+}
+
 function texEscape(value) {
   return value.replace(/[&%$#_{}~^\\]/g, "\\$&");
 }
@@ -77,7 +110,7 @@ function renderCV(data) {
   const personal = data.personal || {};
   document.getElementById('profile-name').textContent = personal.name;
   document.getElementById('profile-title').textContent = personal.description;
-  document.getElementById('summary').textContent = data.statement;
+  renderRichText(document.getElementById('summary'), data.statement);
 
   // Set links in hero
   document.getElementById('webpage-link').href = personal.webpage || '#';

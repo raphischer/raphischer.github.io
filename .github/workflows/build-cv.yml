@@ -5,6 +5,7 @@ on:
     branches: [ main ]
     paths:
       - 'data/cv.json'
+      - 'styles.css'
       - 'scripts/**'
       - '.github/workflows/build-cv.yml'
   workflow_dispatch: {}
@@ -45,6 +46,6 @@ jobs:
           author_name: "github-actions[bot]"
           author_email: "github-actions[bot]@users.noreply.github.com"
           message: "Auto-build CV PDF"
-          add: cv.pdf
+          add: cv.pdf cv.tex CustomCoverletter.sty
           sign: false
           skip_empty_commit: true
