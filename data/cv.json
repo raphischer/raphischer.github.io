@@ -20,7 +20,7 @@
     },
     {
       "text": "XplaiNLP Group",
-      "href": "https://xplainlp.github.io/"
+      "href": "https://xplainlp.uni-mainz.de"
     },
     {
       "text": " I work on narrative monitoring and disinformation detection with LLMs. "
@@ -103,7 +103,7 @@
           "title": "YIG Prep Pro Remote Fellow",
           "organization": "Karlsruhe Institute of Technology",
           "highlights": [
-            "Receiving tailored mentorship, proposal strategy guidance, and training to prepare a competitive, third-party-funded junior research group proposal"
+            "Competitive mentorship program to start a third-party-funded junior research group"
           ]
         },
         {
@@ -111,7 +111,6 @@
           "title": "PhD in Computer Science",
           "organization": "TU Dortmund University -- Summa cum laude | 1.0 | ECTS A",
           "highlights": [
-            "Investigating energy efficiency, multi-objective optimization, and user perceptions in ML and AI",
             "Thesis topic: Advancing the Sustainability of ML and AI via Labeling and Meta-Learning",
             "Committee: JProf. Thomas Liebig, Prof. Geoff Webb, Prof. Christian Janiesch, Prof. Jakob Rehof"
           ]
@@ -129,7 +128,6 @@
           "title": "Master's in Computer Science",
           "organization": "TU Dortmund University -- 1.2 | ECTS B",
           "highlights": [
-            "Focusing on pattern recognition, machine learning, and artificial intelligence",
             "Thesis topic: Filling Gaps in Incomplete Satellite Images with Compressable STRFs",
             "Supervisors: Prof. Katharina Morik, Dr. Nico Piatkowski"
           ]
@@ -156,10 +154,10 @@
       "heading": "Awards & Scholarships",
       "items": [
         {
-          "title": "Nominated for the Doctoral Thesis Award from the Gesellschaft für Informatik e.V.",
+          "title": "Nominated for GI-Dissertationspreis (Doctoral Thesis Award from the German Informatics Society)",
           "organization": "2026",
           "highlights": [
-            "Nominated by the Computer Science Faculty at TU Dortmund University, due to an outstanding PhD"
+            "Nominated by the Computer Science Faculty at TU Dortmund University, due to an outstanding doctorate"
           ]
         },
         {
@@ -185,32 +183,35 @@
           "title": "Supervision",
           "organization": "Bachelor's & Master's theses as well as student assistants",
           "highlights": [
-            "01/26 -- Master's student assistant Y. Abdelrahim, working on efficiency benchmarking of AI (ongoing)",
-            "03/26 -- MA of T. Horny on Investigating Energy Efficiency Dimensions for Local Deployment in Large Language Models",
-            "12/25 -- BA of B. Demirici on Benchmarking Large Language Models for Sustainable Evaluation",
-            "10/25 -- BA of F. Meree on Interactive AI Labels for Trust: A User-Centric Reporting Framework",
+            "01/26 -- Master's student assistant Y. Abdelrahim, working on efficiency benchmarking of AI",
+            "03/26 -- T. Horny (MA): Investigating Energy Efficiency Dimensions for Local Deployment in Large Language Models",
+            "12/25 -- B. Demirici (BA): Benchmarking Large Language Models for Sustainable Evaluation",
+            "10/25 -- F. Meree (BA): Interactive AI Labels for Trust: A User-Centric Reporting Framework",
             "06/24 -- Bachelor's student assistant K. Poitz, working on interdisciplinary evaluations of AI labels (until 05/26)",
-            "10/24 -- BA of F. Theiner on Resource Efficiency of Adversarial Training and Inference of RobustBench Models",
-            "02/24 -- BA of A. Borowski on Energy Efficiency Analysis of Knowledge Graph Embedding Models",
+            "10/24 -- F. Theiner (BA): Resource Efficiency of Adversarial Training and Inference of RobustBench Models",
+            "02/24 -- A. Borowski (BA): Energy Efficiency Analysis of Knowledge Graph Embedding Models",
             "12/22 -- Master's student assistant A. van der Staay, working on benchmarking AI edge devices (until 12/23)",
-            "11/23 -- BA of T. Kubiak on A Comparative Analysis of Parameter-Efficient-Fine-Tuning Methods in LLMs",
-            "09/22 -- MA of F. Dillkötter on Automated Generation of Evaluation Tasks for ML Models"
+            "11/23 -- T. Kubiak (BA): A Comparative Analysis of Parameter-Efficient-Fine-Tuning Methods in LLMs",
+            "09/22 -- F. Dillkötter (MA): Automated Generation of Evaluation Tasks for ML Models"
           ]
         },
         {
-          "title": "Lectures and Talks",
+          "title": "Lectures, Seminars and Individual Talks",
           "organization": "For Bachelor's, Master's & PhD students",
           "highlights": [
-            "05/26 -- Sustainable AI Development (RC-Trust Graduate School)",
-            "04/26 -- Bridging the Communication Gap: Labels for Sustainable AI Development (CEIPI AI Digital Technologies and IP Master)",
-            "04/26 -- Sustainable Development in Deep Learning (ELLIS Mathematics & Efficiency of Deep Learning reading group)",
-            "10/25 -- Sustainable Development in the Age of AI (Computer Science and Sustainability lecture series)",
-            "10/25 -- Fundamentals of Trustworthy AI (Data, Knowledge, and Context in ML and AI lecture series)",
-            "05/25 -- Sustainability and AI (Introduction to Data Science II lecture series)"
+            "10/26 -- Seminar: AI & Society Coding Lab (Elective MA module @ JGU Mainz, main organizer)",
+            "10/26 -- Lecture Series: Explainable AI (Elective MA module @ JGU Mainz, co-organization)",
+            "09/26 -- Lecture: Assessing and Documenting Environmental Impacts of AI (WisPerMed Summer School)",
+            "05/26 -- Lecture: Sustainable AI Development (RC-Trust Graduate School)",
+            "04/26 -- Lecture: Labels for Sustainable AI Development (CEIPI AI Digital Technologies and IP Master Program)",
+            "04/26 -- Lecture: Sustainable Development in Deep Learning (ELLIS Mathematics & Efficiency of Deep Learning reading group)",
+            "10/25 -- Lecture: Sustainable Development in the Age of AI (Computer Science and Sustainability lecture series @ TUDo)",
+            "10/25 -- Lecture: Fundamentals of Trustworthy AI (Data, Knowledge, and Context in ML and AI lecture series @ TUDo)",
+            "05/25 -- Lecture: Sustainability and AI (Introduction to Data Science II lecture series @ TUDo)"
           ]
         },
         {
-          "title": "Other Activities",
+          "title": "Other Educational Activities",
           "organization": "Educating school students & general public",
           "highlights": [
             "2025 -- Teaching GISSV students (remote) and organizing workshops for Digital Week Dortmund and Girls' Day @ Lamarr",
@@ -221,7 +222,7 @@
       ]
     },
     {
-      "heading": "Volunteering & Activities",
+      "heading": "Volunteering & Community Activities",
       "items": [
         {
           "title": "Young AI Leaders",
@@ -236,7 +237,7 @@
           "title": "Scientific Community Services",
           "organization": "since 2022",
           "highlights": [
-            "Editor for Journal of Artificial Intelligence Research (JAIR) Special Track on Challenges in Pretraining 2026",
+            "Associate Editor for Journal of Artificial Intelligence Research (JAIR) 2026",
             "Reviewing for International Conference on Data Mining (ICDM) 2026",
             "Reviewing for Conference on Fairness, Accountability, and Transparency (FAccT) 2026",
             "Reviewing for Explainable AI for Time Series and Data Streams Workshop (TempXAI @ ECML-PKDD) 2025 & 2024",
@@ -249,7 +250,7 @@
           "title": "Lamarr Institute and CS Faculty @ TU Dortmund University",
           "organization": "administrative activities",
           "highlights": [
-            "Invited talks at ENFIELD Energy & Green AI Workshop (11/25), Sustainable AI Conference (09/25), Greentech.Ruhr meeting (05/25), DOPPLERS (03/25), BAuA KI-Werkstatt (11/24), AISoLA Conference (10/23), and BIFOLD All Hands Meeting (10/23)",
+            "Various invited talks, including ENFIELD Energy & Green AI Workshop (11/25), Sustainable AI Conference (09/25), Greentech.Ruhr meeting (05/25), DOPPLERS (03/25), BAuA KI-Werkstatt (11/24), AISoLA Conference (10/23), and BIFOLD All Hands Meeting (10/23)",
             "Posters & demos at the Trustworthy AI Summit (09/25), political visits (06/24, 09/23, 08/19), and various strategic events",
             "Selected delegation member for visits in Canada (10/25), USA (04/24), and France (07/22)",
             "Research visit & talk at Emma Strubell's Lab @ Carnegie Mellon University, Pittsburgh, USA (02/22)",
